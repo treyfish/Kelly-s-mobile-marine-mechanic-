@@ -53,19 +53,19 @@ export async function POST(request: Request) {
         subject: `New Booking: ${fullName} — ${body.boatType || "Boat"} ${body.engineBrand || ""}`.trim(),
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <div style="background-color: #0a1628; padding: 20px; text-align: center;">
+            <div style="background-color: #0f2b5b; padding: 20px; text-align: center;">
               <h1 style="color: #f59e0b; margin: 0; font-size: 24px;">New Booking Request</h1>
             </div>
             <div style="padding: 24px; background: #f9fafb;">
               <table style="width: 100%; border-collapse: collapse;">
-                <tr><td style="padding: 8px 0; font-weight: bold; color: #0a1628; width: 140px;">Name:</td><td style="padding: 8px 0;">${fullName}</td></tr>
-                <tr><td style="padding: 8px 0; font-weight: bold; color: #0a1628;">Phone:</td><td style="padding: 8px 0;"><a href="tel:${phone.replace(/\D/g, '')}">${phone}</a></td></tr>
-                <tr><td style="padding: 8px 0; font-weight: bold; color: #0a1628;">Email:</td><td style="padding: 8px 0;"><a href="mailto:${email}">${email}</a></td></tr>
-                ${body.boatType ? `<tr><td style="padding: 8px 0; font-weight: bold; color: #0a1628;">Boat Type:</td><td style="padding: 8px 0;">${body.boatType}</td></tr>` : ""}
-                ${body.engineBrand ? `<tr><td style="padding: 8px 0; font-weight: bold; color: #0a1628;">Engine Brand:</td><td style="padding: 8px 0;">${body.engineBrand}</td></tr>` : ""}
-                <tr><td style="padding: 8px 0; font-weight: bold; color: #0a1628; vertical-align: top;">Problem:</td><td style="padding: 8px 0;">${problem}</td></tr>
-                ${body.preferredDate ? `<tr><td style="padding: 8px 0; font-weight: bold; color: #0a1628;">Preferred Date:</td><td style="padding: 8px 0;">${body.preferredDate}</td></tr>` : ""}
-                <tr><td style="padding: 8px 0; font-weight: bold; color: #0a1628;">Location:</td><td style="padding: 8px 0;">${location}</td></tr>
+                <tr><td style="padding: 8px 0; font-weight: bold; color: #0f2b5b; width: 140px;">Name:</td><td style="padding: 8px 0;">${fullName}</td></tr>
+                <tr><td style="padding: 8px 0; font-weight: bold; color: #0f2b5b;">Phone:</td><td style="padding: 8px 0;"><a href="tel:${phone.replace(/\D/g, '')}">${phone}</a></td></tr>
+                <tr><td style="padding: 8px 0; font-weight: bold; color: #0f2b5b;">Email:</td><td style="padding: 8px 0;"><a href="mailto:${email}">${email}</a></td></tr>
+                ${body.boatType ? `<tr><td style="padding: 8px 0; font-weight: bold; color: #0f2b5b;">Boat Type:</td><td style="padding: 8px 0;">${body.boatType}</td></tr>` : ""}
+                ${body.engineBrand ? `<tr><td style="padding: 8px 0; font-weight: bold; color: #0f2b5b;">Engine Brand:</td><td style="padding: 8px 0;">${body.engineBrand}</td></tr>` : ""}
+                <tr><td style="padding: 8px 0; font-weight: bold; color: #0f2b5b; vertical-align: top;">Problem:</td><td style="padding: 8px 0;">${problem}</td></tr>
+                ${body.preferredDate ? `<tr><td style="padding: 8px 0; font-weight: bold; color: #0f2b5b;">Preferred Date:</td><td style="padding: 8px 0;">${body.preferredDate}</td></tr>` : ""}
+                <tr><td style="padding: 8px 0; font-weight: bold; color: #0f2b5b;">Location:</td><td style="padding: 8px 0;">${location}</td></tr>
               </table>
             </div>
           </div>
@@ -79,18 +79,18 @@ export async function POST(request: Request) {
         subject: `Booking Confirmed — ${BUSINESS_NAME}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <div style="background-color: #0a1628; padding: 30px; text-align: center;">
+            <div style="background-color: #0f2b5b; padding: 30px; text-align: center;">
               <h1 style="color: #ffffff; margin: 0; font-size: 28px;">${BUSINESS_NAME}</h1>
               <p style="color: #0891b2; margin: 8px 0 0; font-size: 14px;">Mobile Marine Mechanic — Cedar Key, FL</p>
             </div>
             <div style="padding: 32px 24px; background: #ffffff;">
-              <h2 style="color: #0a1628; margin: 0 0 16px;">Thank you, ${fullName}!</h2>
+              <h2 style="color: #0f2b5b; margin: 0 0 16px;">Thank you, ${fullName}!</h2>
               <p style="color: #374151; line-height: 1.6;">
                 Your booking request has been received. Kelly will review your request and
                 <strong>confirm your appointment within 2 hours</strong>.
               </p>
               <div style="background: #f0fdfa; border-left: 4px solid #0891b2; padding: 16px; margin: 24px 0; border-radius: 4px;">
-                <p style="margin: 0; color: #0a1628; font-weight: bold;">Your Booking Details:</p>
+                <p style="margin: 0; color: #0f2b5b; font-weight: bold;">Your Booking Details:</p>
                 ${body.boatType ? `<p style="margin: 4px 0 0; color: #374151;">Boat: ${body.boatType} ${body.engineBrand ? `(${body.engineBrand})` : ""}</p>` : ""}
                 <p style="margin: 4px 0 0; color: #374151;">Problem: ${problem}</p>
                 ${body.preferredDate ? `<p style="margin: 4px 0 0; color: #374151;">Preferred Date: ${body.preferredDate}</p>` : ""}
@@ -100,12 +100,12 @@ export async function POST(request: Request) {
                 Need immediate help? Call us directly:
               </p>
               <p style="text-align: center; margin: 16px 0;">
-                <a href="tel:3526147167" style="display: inline-block; background: #f59e0b; color: #0a1628; padding: 12px 32px; text-decoration: none; font-weight: bold; border-radius: 4px; font-size: 18px;">
+                <a href="tel:3526147167" style="display: inline-block; background: #f59e0b; color: #0f2b5b; padding: 12px 32px; text-decoration: none; font-weight: bold; border-radius: 4px; font-size: 18px;">
                   Call ${PHONE}
                 </a>
               </p>
             </div>
-            <div style="background: #0a1628; padding: 16px; text-align: center;">
+            <div style="background: #0f2b5b; padding: 16px; text-align: center;">
               <p style="color: #6b7280; margin: 0; font-size: 12px;">
                 &copy; ${new Date().getFullYear()} ${BUSINESS_NAME} LLC. Cedar Key, FL.
               </p>

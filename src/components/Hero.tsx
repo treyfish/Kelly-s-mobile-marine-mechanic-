@@ -9,7 +9,7 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center md:bg-fixed"
         style={{
           backgroundImage: "url('/images/hero-truck.jpg')",
-          backgroundColor: "#0a1628",
+          backgroundColor: "#0f2b5b",
         }}
       />
       {/* Dark overlay */}

@@ -14,7 +14,7 @@ export default function Home() {
       <TrustBadges />
       <WaveDivider fill="#ffffff" />
       <ServicesPreview />
-      <WaveDivider fill="#0a1628" />
+      <WaveDivider fill="#0f2b5b" />
       <HowItWorks />
       <WaveDivider fill="#ffffff" />
       <BrandTicker />

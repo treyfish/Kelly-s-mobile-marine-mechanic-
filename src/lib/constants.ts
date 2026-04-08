@@ -3,6 +3,7 @@ export const PHONE_HREF = "tel:3526147167";
 export const BUSINESS_NAME = "Kelly's Mobile Marine Service";
 export const LOCATION = "Cedar Key, FL and Surrounding Areas";
 export const KELLY_EMAIL = "kellysmobilemarine@gmail.com";
+export const FACEBOOK_URL = "https://www.facebook.com/share/14ap9iGc9t4/?mibextid=wwXIfr";
 
 export const SERVICES = [
   {
