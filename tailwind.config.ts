@@ -12,7 +12,6 @@ const config: Config = {
         navy: "#0f2b5b",
         teal: "#0891b2",
         gold: "#f59e0b",
-        red: "#dc2626",
       },
       fontFamily: {
         oswald: ["Oswald", "var(--font-inter)", "sans-serif"],
